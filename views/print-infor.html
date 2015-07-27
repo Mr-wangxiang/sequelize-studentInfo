@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>print info</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./mystyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center h1">学生信息</div>
+        </div>
+        <table id="table" class="table table-hover table-bordered" cellpadding="0" align="center">
+            <thead>
+                <tr class="active">
+                    <td><h4>id</h3></td>
+                    <td><h4>name</h3></td>
+                    <td><h4>operation</h3></td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        <table align="center">
+            <tr>
+                <td><input type="text" id="addName" class="form-control" value="" placeholder="input name"></td>
+                <td><input type="button" id="add" class="btn btn-primary" value="add name"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+</script>
+
+</html>
