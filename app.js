@@ -44,11 +44,12 @@ app.delete('/student_name/:id', function(req, res) {
     var id = req.params.id;
 
     student_name.destroy({where:{id:id}});
+    res.end();
 });
 
 app.post('/student_name', function(req, res) {
     var name = req.body.name;
-        
+
     student_name.create({name:name});
 });
 
