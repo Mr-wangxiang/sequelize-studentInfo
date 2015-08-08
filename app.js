@@ -1,10 +1,10 @@
 var mysql = require('mysql');
-var express = require('express')
-var app = express()
+var express = require('express');
+var app = express();
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('student', 'root', '', {
+var sequelize = new Sequelize('student', 'root', '123', {
     host: 'localhost',
     port: '3306',
     dialect: 'mysql'
@@ -18,7 +18,8 @@ app.use(express.static('public'));
 app.engine('.html',ejs.__express);
 app.set("view engine",'html');
 
-var student_name = sequelize.define('student_name',   {  
+var student_name = sequelize.define('student_name',   {
+    id: Sequelize.INTEGER,  
     name:  Sequelize.STRING
 }, {
     tableName: 'student_name',
@@ -37,6 +38,7 @@ app.get('/student_names', function(req, res) {
             all_data.push(data[i].dataValues);
         }
     res.send(all_data);
+
     });
 });
 
